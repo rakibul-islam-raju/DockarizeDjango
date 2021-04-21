@@ -1,2 +1,9 @@
+### Part One ===>
 docker build --tag python-django .
 docker run --publish 8000:8000 python-django
+
+### Part Two ===>
+docker-compose build
+docker-compose run --rm app django-admin startproject <project_name> .
+docker-compose up
+docker exec -it django_container /bin/bash
